@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dfpvideo="http://api.google.com/dfpvideo" xmlns:dm="http://www.dailymotion.com/dmrss/"
+     xmlns:media="http://search.yahoo.com/mrss/" xmlns:openSearch="http://a9.com/-/spec/opensearchrss/1.0/"
+     xmlns:tms="http://data.tmsapi.com/v1.1" version="2.0">
+    <channel>
+        <title>Title</title>
+        <dfpvideo:version>2</dfpvideo:version>
+        <link>https://test.net</link>
+        <description>Description</description>
+        <item>
+            <title><![CDATA[Daily Briefing - September 25, 2020]]></title>
+            <dfpvideo:keyvalues key="title" type="string">Daily Briefing - September 25, 2020</dfpvideo:keyvalues>
+            <dfpvideo:contentId>ContentId</dfpvideo:contentId>
+            <dfpvideo:lastModifiedDate>Fri, 25 Sep 2020 22:02:01 GMT</dfpvideo:lastModifiedDate>
+            <dfpvideo:cuepoints>0,268,1408</dfpvideo:cuepoints>
+            <link>
+                https://test.net
+            </link>
+            <media:price type="free"/>
+            <updated>2020-09-25</updated>
+            <dm:show><![CDATA[Daily Briefing]]></dm:show>
+            <dm:showID>ShowId</dm:showID>
+            <description>
+                <![CDATA[Managing editor, Ed Harrison, and senior editor, Ash Bennington, come together to analyze the price action in stocks, bonds, and currencies. Ed looks forward to his interview with Leon Cooperman, and Ash interprets the latest economic data, including today's dismal print for durable goods orders. They then consider the latest political news and discuss how the upcoming presidential election will impact markets. In the intro, Ash speaks to Real Vision editor, Jack Farley, about stocks, credit spreads, and a steepening VIX curve.]]></description>
+            <pubDate>Fri, 25 Sep 2020 05:03:00 GMT</pubDate>
+            <guid isPermaLink="false">Guid</guid>
+            <media:credit role="guest" scheme="media">
+                <![CDATA[Jack Farley, Ash Bennington, and Ed Harrison]]></media:credit>
+            <media:keywords>
+                <![CDATA[Real Vision, Economics, Trading, Interview, Finance, Cryptocurrencies, Investing]]></media:keywords>
+            <media:rating scheme="urn:simple">nonadult</media:rating>
+            <media:community>
+                <media:starRating average="862.5451276839705"/>
+            </media:community>
+            <media:group>
+                <media:content medium="video"
+                               url="https://test.net/23467635.mp4"
+                               type="video/mp4" height="270" width="480" bitrate="513000.0" duration="2023893"/>
+                <media:content medium="video"
+                               url="https://test.net/23467636.mp4"
+                               type="video/mp4" height="1080" width="1920" bitrate="3910000.0" duration="2023893"/>
+                <media:content medium="video"
+                               url="https://test.net/23467637.mp4"
+                               type="video/mp4" height="360" width="640" bitrate="992000.0" duration="2023893"/>
+                <media:content medium="video"
+                               url="https://test.net/23467638.mp4"
+                               type="video/mp4" height="540" width="960" bitrate="1820000.0" duration="2023893"/>
+                <media:thumbnail
+                        url="https://test.net/23467636"
+                        width="363" height="204"/>
+                <media:thumbnail
+                        url="https://test.net/23467637"
+                        width="2688" height="1512"/>
+                <media:thumbnail
+                        url="https://test.net/23467638"
+                        width="2048" height="1536"/>
+            </media:group>
+        </item>
+    </channel>
+</rss>

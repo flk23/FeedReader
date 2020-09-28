@@ -75,6 +75,16 @@
         /// All elements starting with "dc:"
         /// </summary>
         public DublinCore DC { get; set; }
+        
+        /// <summary>
+        /// The "show" field
+        /// </summary>
+        public string Show { get; set; }
+        
+        /// <summary>
+        /// The "cuepoints" field
+        /// </summary>
+        public string Cuepoints { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaRssFeedItem"/> class.
@@ -114,6 +124,8 @@
             this.Guid = item.GetValue("guid");
             this.Description = item.GetValue("description");
             this.Content = item.GetValue("content:encoded")?.HtmlDecode();
+            this.Show = item.GetValue("dm:show");
+            this.Cuepoints = item.GetValue("dfpvideo:cuepoints");
         }
 
         /// <inheritdoc/>

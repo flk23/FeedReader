@@ -356,6 +356,16 @@ namespace CodeHollow.FeedReader.Tests
             Eq("Группа «Серебряная свадьба» ушла в бессрочный отпуск", item.Title);
             Eq("http://citydog.by/post/zaden-serebrianaya-svadba-v-otpuske/", item.Id);
         }
+        
+        [TestMethod]
+        public void TestMediaRssFeedMediaParsedCorrectly()
+        {
+            var feed = FeedReader.ReadFromFile("Feeds/MediaRss.xml");
+            var item = (MediaRssFeedItem) feed.Items.First().SpecificItem;
+            Eq(7, item.MediaGroups.First().Media.Count);
+            Eq("Daily Briefing", item.Show);
+            Eq("0,268,1408", item.Cuepoints);
+        }
 
         [TestMethod]
         public void TestAllFilesForException()

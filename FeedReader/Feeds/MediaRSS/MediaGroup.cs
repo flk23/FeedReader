@@ -21,7 +21,8 @@ namespace CodeHollow.FeedReader.Feeds.MediaRSS
         public MediaGroup (XElement element)
         {
             var media = element.GetElements("media", "content");
-            this.Media = media.Select(x => new Media(x)).ToList();
+            var thumbnails = element.GetElements("media", "thumbnail");
+            this.Media = media.Union(thumbnails).Select(x => new Media(x)).ToList();
         }
 
         /// <summary>
