@@ -155,7 +155,7 @@
             this.Description = item.GetValue("description");
             this.Content = item.GetValue("content:encoded")?.HtmlDecode();
             this.Show = item.GetValue("dm:show") ?? item.GetValue("jwplayer:Series");
-            this.Cuepoints = item.GetValue("dfpvideo:cuepoints") ?? item.GetValue("jwplayer:Series");
+            this.Cuepoints = item.GetValue("dfpvideo:cuepoints") ?? item.GetValue("jwplayer:adCuepoints");
             this.Rating = item.GetValue("jwplayer:Rating");
             this.EpisodeTitle = item.GetValue("jwplayer:Episode_Title");
             this.EpisodeNumber = Helpers.TryParseInt(item.GetValue("jwplayer:Episode_Number"));
