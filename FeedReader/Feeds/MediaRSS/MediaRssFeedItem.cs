@@ -85,6 +85,36 @@
         /// The "cuepoints" field
         /// </summary>
         public string Cuepoints { get; set; }
+        
+        /// <summary>
+        /// Rating
+        /// </summary>
+        public string Rating { get; set; }
+
+        /// <summary>
+        /// Season number
+        /// </summary>
+        public int? SeasonNumber { get; set; }
+
+        /// <summary>
+        /// Episode number
+        /// </summary>
+        public int? EpisodeNumber { get; set; }
+        
+        /// <summary>
+        /// Episode name
+        /// </summary>
+        public string EpisodeTitle { get; set; }
+        
+        /// <summary>
+        /// Licensing Window Start
+        /// </summary>
+        public DateTime? LicensingWindowStart { get; set; }
+
+        /// <summary>
+        /// Licensing Window End
+        /// </summary>
+        public DateTime? LicensingWindowEnd { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaRssFeedItem"/> class.
@@ -124,8 +154,14 @@
             this.Guid = item.GetValue("guid");
             this.Description = item.GetValue("description");
             this.Content = item.GetValue("content:encoded")?.HtmlDecode();
-            this.Show = item.GetValue("dm:show");
-            this.Cuepoints = item.GetValue("dfpvideo:cuepoints");
+            this.Show = item.GetValue("dm:show") ?? item.GetValue("jwplayer:Series");
+            this.Cuepoints = item.GetValue("dfpvideo:cuepoints") ?? item.GetValue("jwplayer:Series");
+            this.Rating = item.GetValue("jwplayer:Rating");
+            this.EpisodeTitle = item.GetValue("jwplayer:Episode_Title");
+            this.EpisodeNumber = Helpers.TryParseInt(item.GetValue("jwplayer:Episode_Number"));
+            this.SeasonNumber = Helpers.TryParseInt(item.GetValue("jwplayer:Season_Number"));
+            this.LicensingWindowStart = Helpers.TryParseDateTime(item.GetValue("jwplayer:Licensing_Window_Start"));
+            this.LicensingWindowEnd = Helpers.TryParseDateTime(item.GetValue("jwplayer:Licensing_Window_End"));
         }
 
         /// <inheritdoc/>
